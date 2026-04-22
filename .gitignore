@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Chrome Extension 패키징 결과물
+*.crx
+*.pem
+*.zip
+
+# Node (혹시 빌드 도구 추가시)
+node_modules/

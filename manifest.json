@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "GeekNews Theme",
+  "version": "0.1.0",
+  "description": "news.hada.io를 newneek 스타일로 읽기 편하게 바꿔주는 테마",
+  "permissions": ["storage"],
+  "action": {
+    "default_title": "GeekNews Theme",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://news.hada.io/*"],
+      "css": ["content.css"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

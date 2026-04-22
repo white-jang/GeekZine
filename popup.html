@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <title>GeekNews Theme</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans KR", sans-serif;
+      width: 220px;
+      margin: 0;
+      padding: 14px 16px;
+      font-size: 14px;
+    }
+    h1 {
+      font-size: 14px;
+      font-weight: 600;
+      margin: 0 0 10px;
+    }
+    .row {
+      display: flex;
+      gap: 8px;
+    }
+    button {
+      flex: 1;
+      padding: 8px 0;
+      border: 1px solid #d0d0d0;
+      background: #fff;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+    button.active {
+      background: #111;
+      color: #fff;
+      border-color: #111;
+    }
+  </style>
+</head>
+<body>
+  <h1>테마 선택</h1>
+  <div class="row">
+    <button id="light">라이트</button>
+    <button id="dark">다크</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
