@@ -15,7 +15,8 @@ html[data-gn-theme="light"] {
   --gn-accent: #35a79c;
   --gn-visited: #888888;
   --gn-row-hover: #f6f6f6;
-  --gn-code-bg: #f4f4f4;
+  --gn-code-bg: #f0f4f3;
+  --gn-code-text: #2b6e63;
 }
 
 html[data-gn-theme="dark"] {
@@ -32,6 +33,7 @@ html[data-gn-theme="dark"] {
   --gn-visited: #8a92a0;
   --gn-row-hover: #2b3442;
   --gn-code-bg: #2b3442;
+  --gn-code-text: #a8d8d0;
 }
 
 /* ---- Global reset-ish ---- */
@@ -423,7 +425,9 @@ article code {
 }
 
 article code {
-  background: var(--gn-code-bg);
+  background: var(--gn-code-bg) !important;
+  border-color: var(--gn-border) !important;
+  color: var(--gn-code-text) !important;
   padding: 2px 6px;
   border-radius: 4px;
 }
@@ -520,8 +524,8 @@ article pre code {
 /* ---- Comments (thread) ---- */
 .comments {
   padding-top: 20px !important;
-  border-top: 1px solid var(--gn-border);
-  margin-top: 36px;
+  border-top: none !important;
+  margin-top: 0;
 }
 
 .comment_thread .comment_row,
@@ -560,8 +564,15 @@ article pre code {
   line-height: 1.75 !important;
 }
 
-.commentTD p {
+.commentTD p,
+.commentTD > span > p,
+.commentTD > span ul > li {
+  font-size: 15px !important;
   margin: 0.6em 0 !important;
+}
+
+#comment_thread {
+  padding-left: 0 !important;
 }
 
 .descendant {
@@ -571,7 +582,17 @@ article pre code {
 .comment_form {
   padding-left: 0 !important;
   max-width: none !important;
-  margin: 24px 0;
+  margin: 36px 0 24px !important;
+  padding-top: 24px !important;
+  border-top: 1px solid var(--gn-border) !important;
+}
+
+.write_comment {
+  padding-left: 0 !important;
+  max-width: none !important;
+  margin: 0 0 24px !important;
+  padding-top: 12px !important;
+  border-top: none !important;
 }
 
 /* Related topics */
@@ -625,8 +646,9 @@ textarea.comment_textarea {
 input.comment_button,
 input[type="submit"].comment_button,
 .reply_button {
-  background: var(--gn-text) !important;
-  color: var(--gn-bg) !important;
+  background: var(--gn-accent) !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
   border: none !important;
   border-radius: 8px !important;
   padding: 8px 16px !important;
@@ -680,11 +702,26 @@ footer a:focus-visible {
 .site-footer-notice {
   background: var(--gn-surface) !important;
   color: var(--gn-text-soft) !important;
-  border: 1px solid var(--gn-border);
+  border: 1px solid var(--gn-border) !important;
   border-radius: 10px;
 }
 
-.site-footer-notice a {
+.site-footer-notice__copy {
+  color: var(--gn-text-soft) !important;
+}
+
+.site-footer-notice__copy a {
+  color: var(--gn-text) !important;
+  border-bottom-color: var(--gn-border) !important;
+}
+
+.site-footer-notice__dismiss {
+  color: var(--gn-text-muted) !important;
+  background: transparent !important;
+}
+
+.site-footer-notice__dismiss:hover,
+.site-footer-notice__copy a:hover {
   color: var(--gn-text) !important;
 }
 
@@ -704,6 +741,63 @@ li .u {
   text-decoration: none !important;
 }
 
+/* weekly 등 본문 내 a.u 링크 테마 컬러 적용 */
+a.u,
+.weekly a.u {
+  color: var(--gn-text) !important;
+}
+
+a.u:hover,
+.weekly a.u:hover {
+  color: var(--gn-accent) !important;
+}
+
+/* ---- Weekly page 포인트 컬러 통일 ---- */
+.weekly-container a {
+  color: var(--gn-accent) !important;
+  border-bottom-color: var(--gn-accent) !important;
+}
+
+.weekly-container a:hover {
+  color: var(--gn-text) !important;
+  border-bottom-color: var(--gn-text) !important;
+}
+
+.weekly-container .link {
+  color: var(--gn-accent) !important;
+}
+
+.weekly-container .headline {
+  border-bottom-color: var(--gn-accent) !important;
+}
+
+.weekly-container #logo {
+  color: var(--gn-accent) !important;
+}
+
+.bookmarklet {
+  background-color: var(--gn-surface) !important;
+  border: 1px solid var(--gn-accent) !important;
+  color: var(--gn-text) !important;
+}
+
+/* 원본 포인트 컬러 (#000065/#6666FF) → 액센트 통일 */
+.blue {
+  color: var(--gn-accent) !important;
+}
+
+.mine {
+  color: var(--gn-accent) !important;
+}
+
+.headline {
+  border-bottom-color: var(--gn-accent) !important;
+}
+
+.userinfo .authcode {
+  border-bottom-color: var(--gn-accent) !important;
+}
+
 .karma {
   color: var(--gn-text-muted) !important;
   font-size: 12px;
@@ -716,6 +810,78 @@ li .u {
   border-radius: 4px;
   padding: 1px 6px;
   font-size: 11px;
+}
+
+/* ---- Profile page (@username) ---- */
+/* 프로필 전용 CSS 변수를 우리 테마 변수로 매핑 */
+html[data-gn-theme="light"] .profile-page article {
+  --profile-ink: var(--gn-text) !important;
+  --profile-about: var(--gn-text-soft) !important;
+  --profile-muted: var(--gn-text-muted) !important;
+  --profile-dotted-border: var(--gn-border) !important;
+  --profile-divider: var(--gn-border) !important;
+  --profile-series-border: var(--gn-border) !important;
+  --profile-tool-border: var(--gn-accent) !important;
+  --profile-tool-bg: var(--gn-surface) !important;
+  --profile-tool-bg-hover: var(--gn-row-hover) !important;
+  --profile-tool-ink: var(--gn-accent) !important;
+  --profile-field-border: var(--gn-border) !important;
+  --profile-field-bg: var(--gn-bg) !important;
+  --profile-static-border: var(--gn-border) !important;
+  --profile-static-bg: var(--gn-surface) !important;
+  --profile-static-ink: var(--gn-text-soft) !important;
+  --profile-slot-border: var(--gn-border) !important;
+  --profile-slot-bg: var(--gn-surface) !important;
+  --profile-panel-bg: var(--gn-surface) !important;
+  --profile-panel-border: var(--gn-border) !important;
+  --profile-text-main: var(--gn-text) !important;
+  --profile-text-subtle: var(--gn-text-soft) !important;
+  --profile-border-soft: var(--gn-border) !important;
+  --profile-icon-panel-bg: var(--gn-surface) !important;
+  --profile-meta-bg: transparent !important;
+  color: var(--gn-text) !important;
+}
+
+html[data-gn-theme="dark"] .profile-page article {
+  --profile-ink: var(--gn-text) !important;
+  --profile-about: var(--gn-text-soft) !important;
+  --profile-muted: var(--gn-text-muted) !important;
+  --profile-dotted-border: var(--gn-border) !important;
+  --profile-divider: var(--gn-border) !important;
+  --profile-series-border: var(--gn-border) !important;
+  --profile-tool-border: var(--gn-accent) !important;
+  --profile-tool-bg: var(--gn-surface) !important;
+  --profile-tool-bg-hover: var(--gn-row-hover) !important;
+  --profile-tool-ink: var(--gn-accent) !important;
+  --profile-field-border: var(--gn-border) !important;
+  --profile-field-bg: var(--gn-bg) !important;
+  --profile-static-border: var(--gn-border) !important;
+  --profile-static-bg: var(--gn-surface) !important;
+  --profile-static-ink: var(--gn-text-soft) !important;
+  --profile-slot-border: var(--gn-border) !important;
+  --profile-slot-bg: var(--gn-surface) !important;
+  --profile-panel-bg: var(--gn-surface) !important;
+  --profile-panel-border: var(--gn-border) !important;
+  --profile-text-main: var(--gn-text) !important;
+  --profile-text-subtle: var(--gn-text-soft) !important;
+  --profile-border-soft: var(--gn-border) !important;
+  --profile-icon-panel-bg: var(--gn-surface) !important;
+  --profile-meta-bg: transparent !important;
+  color: var(--gn-text) !important;
+}
+
+/* profile-header 배경을 카드(panel)와 동일하게 */
+.profile-header {
+  background: var(--profile-panel-bg, var(--gn-surface)) !important;
+}
+
+.profile-section.badge-lens {
+  border-bottom: none !important;
+}
+
+/* 소개글 없는 프로필: header 바로 다음 section의 border-top 제거 (이중선 방지) */
+.profile-header + .profile-section {
+  border-top: none !important;
 }
 
 /* Mobile-ish responsive polish */
