@@ -27,9 +27,9 @@ html[data-gn-theme="dark"] {
   --gn-text: #e9ecef;
   --gn-text-soft: #c4c9d0;
   --gn-text-muted: #9aa3ad;
-  --gn-link: #d7e4ff;
-  --gn-link-hover: #ffffff;
-  --gn-accent: #6666FF;
+  --gn-link: #5cc7bc;
+  --gn-link-hover: #8eddd5;
+  --gn-accent: #5cc7bc;
   --gn-visited: #8a92a0;
   --gn-row-hover: #2b3442;
   --gn-code-bg: #2b3442;
@@ -388,7 +388,7 @@ article li {
 }
 
 article a {
-  color: var(--gn-link) !important;
+  color: var(--gn-accent) !important;
   text-decoration: underline;
   text-decoration-color: var(--gn-border);
   text-underline-offset: 3px;
