@@ -884,6 +884,68 @@ html[data-gn-theme="dark"] .profile-page article {
   border-top: none !important;
 }
 
+/* GeekBots */
+.geekbots-subscribe-card {
+  overflow: hidden !important;
+}
+span.geekbots-subscribe-handle {
+  font-size: 11px !important;
+  word-break: break-all !important;
+}
+
+/* GeekBadge */
+html[data-gn-theme="light"] .guide-panel h2,
+html[data-gn-theme="light"] .guide-panel p,
+html[data-gn-theme="light"] .guide-panel li,
+html[data-gn-theme="light"] div.intro,
+html[data-gn-theme="light"] div.intro strong,
+html[data-gn-theme="light"] div.intro p {
+  color: var(--gn-text) !important;
+}
+
+html[data-gn-theme="dark"] .guide-panel h2,
+html[data-gn-theme="dark"] .guide-panel p,
+html[data-gn-theme="dark"] .guide-panel li,
+html[data-gn-theme="dark"] div.intro,
+html[data-gn-theme="dark"] div.intro strong,
+html[data-gn-theme="dark"] div.intro p {
+  color: var(--gn-text) !important;
+}
+
+/* guide-card는 어두운 배경 — 텍스트 밝게 */
+html[data-gn-theme="light"] .guide-card,
+html[data-gn-theme="light"] .guide-card * {
+  color: #ffffff !important;
+}
+
+html[data-gn-theme="light"] a.guide-button.primary {
+  background: var(--gn-accent) !important;
+  color: #ffffff !important;
+  border-color: var(--gn-accent) !important;
+}
+
+html[data-gn-theme="light"] a.guide-button.primary:hover {
+  opacity: 0.85 !important;
+}
+
+html[data-gn-theme="light"] p.support-lead {
+  color: var(--gn-text-soft) !important;
+}
+
+html[data-gn-theme="light"] div.support-panel > strong {
+  color: #ffffff !important;
+}
+
+html[data-gn-theme="light"] a.support-button.support-button-primary {
+  background: var(--gn-accent) !important;
+  color: #ffffff !important;
+  border-color: var(--gn-accent) !important;
+}
+
+html[data-gn-theme="light"] a.support-button.support-button-primary:hover {
+  opacity: 0.85 !important;
+}
+
 /* Mobile-ish responsive polish */
 @media (max-width: 1000px) {
   body {

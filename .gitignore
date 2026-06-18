@@ -19,3 +19,6 @@
 
 # Node (혹시 빌드 도구 추가시)
 node_modules/
+
+# 기록용 폴더
+issues/
