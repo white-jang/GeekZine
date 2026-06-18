@@ -1,12 +1,22 @@
 {
   "manifest_version": 3,
-  "name": "GeekNews Theme",
+  "name": "GeekZine",
   "version": "0.1.0",
-  "description": "news.hada.io를 newneek 스타일로 읽기 편하게 바꿔주는 테마",
+  "description": "GeekNews(news.hada.io)를 매거진 스타일로 바꿔주는 테마 익스텐션",
   "permissions": ["storage"],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
   "action": {
-    "default_title": "GeekNews Theme",
-    "default_popup": "popup.html"
+    "default_title": "GeekZine",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
   },
   "content_scripts": [
     {
