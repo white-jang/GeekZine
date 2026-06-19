@@ -887,10 +887,45 @@ html[data-gn-theme="dark"] .profile-page article {
 /* GeekBots */
 .geekbots-subscribe-card {
   overflow: hidden !important;
+  padding-right: var(--gn-card-padding, 16px) !important;
 }
 span.geekbots-subscribe-handle {
   font-size: 11px !important;
   word-break: break-all !important;
+}
+
+html[data-gn-theme="light"] .geekbots-eyebrow,
+html[data-gn-theme="light"] .geekbots-stat-number {
+  color: var(--gn-accent) !important;
+}
+
+html[data-gn-theme="light"] .geekbots-hero {
+  border-bottom-color: var(--gn-accent) !important;
+}
+
+html[data-gn-theme="light"] .geekbots-reason,
+html[data-gn-theme="light"] .geekbots-contact {
+  border-top-color: var(--gn-accent) !important;
+}
+
+html[data-gn-theme="light"] .geekbots-bot-card:hover,
+html[data-gn-theme="light"] .geekbots-subscribe-card:hover {
+  border-color: var(--gn-accent) !important;
+}
+
+html[data-gn-theme="light"] .geekbots-email-copy {
+  color: var(--gn-accent) !important;
+  border-color: var(--gn-accent) !important;
+}
+
+html[data-gn-theme="light"] .geekbots-email-copy:hover {
+  background: var(--gn-accent) !important;
+  color: #ffffff !important;
+}
+
+html[data-gn-theme="light"] .geekbots-bot-action {
+  color: var(--gn-accent) !important;
+  border-color: var(--gn-accent) !important;
 }
 
 html[data-gn-theme="dark"] p.geekbots-lead,
