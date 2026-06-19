@@ -893,6 +893,45 @@ span.geekbots-subscribe-handle {
   word-break: break-all !important;
 }
 
+html[data-gn-theme="dark"] p.geekbots-lead,
+html[data-gn-theme="dark"] p.geekbots-section-intro,
+html[data-gn-theme="dark"] div.geekbots-reason > p {
+  color: var(--gn-text) !important;
+}
+
+html[data-gn-theme="dark"] .geekbots-eyebrow {
+  color: var(--gn-accent) !important;
+}
+
+html[data-gn-theme="dark"] .geekbots-bot-name,
+html[data-gn-theme="dark"] .geekbots-subscribe-name,
+html[data-gn-theme="dark"] div.geekbots-trust strong {
+  color: var(--gn-text-muted) !important;
+}
+
+html[data-gn-theme="dark"] .geekbots-contact > p {
+  color: var(--gn-text) !important;
+}
+
+html[data-gn-theme="dark"] div.weekly-intro.keepall > p {
+  color: var(--gn-text) !important;
+}
+
+html[data-gn-theme="dark"] .geekbots-hero {
+  border-bottom-color: var(--gn-accent) !important;
+}
+
+html[data-gn-theme="dark"] .geekbots-reason,
+html[data-gn-theme="dark"] .geekbots-contact {
+  border-top-color: var(--gn-accent) !important;
+}
+
+html[data-gn-theme="dark"] .geekbots-stat-panel .geekbots-stat-number,
+html[data-gn-theme="dark"] .geekbots-stat-panel .geekbots-stat-label,
+html[data-gn-theme="dark"] .geekbots-stat-panel .geekbots-stat-note {
+  color: var(--gn-text) !important;
+}
+
 /* GeekBadge */
 html[data-gn-theme="light"] .guide-panel h2,
 html[data-gn-theme="light"] .guide-panel p,
@@ -918,13 +957,15 @@ html[data-gn-theme="light"] .guide-card * {
   color: #ffffff !important;
 }
 
-html[data-gn-theme="light"] a.guide-button.primary {
+html[data-gn-theme="light"] a.guide-button.primary,
+html[data-gn-theme="dark"] a.guide-button.primary {
   background: var(--gn-accent) !important;
   color: #ffffff !important;
   border-color: var(--gn-accent) !important;
 }
 
-html[data-gn-theme="light"] a.guide-button.primary:hover {
+html[data-gn-theme="light"] a.guide-button.primary:hover,
+html[data-gn-theme="dark"] a.guide-button.primary:hover {
   opacity: 0.85 !important;
 }
 
@@ -936,13 +977,15 @@ html[data-gn-theme="light"] div.support-panel > strong {
   color: #ffffff !important;
 }
 
-html[data-gn-theme="light"] a.support-button.support-button-primary {
+html[data-gn-theme="light"] a.support-button.support-button-primary,
+html[data-gn-theme="dark"] a.support-button.support-button-primary {
   background: var(--gn-accent) !important;
   color: #ffffff !important;
   border-color: var(--gn-accent) !important;
 }
 
-html[data-gn-theme="light"] a.support-button.support-button-primary:hover {
+html[data-gn-theme="light"] a.support-button.support-button-primary:hover,
+html[data-gn-theme="dark"] a.support-button.support-button-primary:hover {
   opacity: 0.85 !important;
 }
 
