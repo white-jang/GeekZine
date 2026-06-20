@@ -81,7 +81,8 @@ nav {
   justify-content: space-between !important;
   gap: 12px;
   font-size: 13.5px !important;
-  flex-wrap: wrap;
+  flex-wrap: nowrap !important;
+  max-width: 100% !important;
 }
 
 nav .ltd,
@@ -94,9 +95,9 @@ nav .rtd {
 }
 
 nav .ltd {
+  flex: 1 1 0 !important;
   flex-wrap: wrap;
   row-gap: 6px;
-  flex: 1 1 auto;
 }
 
 nav .rtd {
